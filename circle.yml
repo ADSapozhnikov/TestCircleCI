@@ -2,6 +2,12 @@
 machine:
   timezone:
     Asia/Jerusalem
+  node:
+    version: 6.10
+  php:
+    version: 5.6.17
+  java:
+    version: openjdk8
 
 general:
   branches:
@@ -11,7 +17,7 @@ general:
 ## Customize test commands
 test:
   post:
-    - uname
+    - uname -a
 
 ## Customize deployment commands
 #deployment:

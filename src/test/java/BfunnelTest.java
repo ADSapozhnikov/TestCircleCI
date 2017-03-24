@@ -10,7 +10,7 @@ import static java.lang.Thread.sleep;
 
 public class BfunnelTest {
 
-    public RemoteWebDriver driver;
+    public WebDriver driver;
 
     ToolsChooser toolsChooser;
 
