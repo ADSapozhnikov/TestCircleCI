@@ -2,7 +2,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.WebDriver;
+import org.openqa.selenium.WebDriver;
 
 public class Browser {
 

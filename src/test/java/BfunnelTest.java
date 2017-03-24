@@ -2,7 +2,7 @@ import PageTypes.ToolsChooser;
 import TestTools.Variables;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.WebDriver;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import static TestTools.Variables.currentDate;
