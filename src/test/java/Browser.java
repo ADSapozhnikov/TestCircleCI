@@ -2,12 +2,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.WebDriver;
 
 public class Browser {
 
-    public static RemoteWebDriver getDriver(String browser) throws MalformedURLException {
-        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), getBrowserCapabilities(browser));
+    public static WebDriver getDriver(String browser) throws MalformedURLException {
+        return new WebDriver(new URL("http://localhost:4444/wd/hub"), getBrowserCapabilities(browser));
 
     }
 

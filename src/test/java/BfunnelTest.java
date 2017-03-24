@@ -2,7 +2,7 @@ import PageTypes.ToolsChooser;
 import TestTools.Variables;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.WebDriver;
 import org.testng.annotations.Test;
 
 import static TestTools.Variables.currentDate;
@@ -21,25 +21,6 @@ public class BfunnelTest {
 
         GoogleSpreadSheetReader.main (null);
         GooglePrivateSpreadSheetReader.main (null);
-
-
-
-
-//        https://docs.google.com/spreadsheets/d/17-6pk_-bq04FAw3CbEUZ7nT_Fe_oOc6u6X7y6PFRhVs/edit#gid=0
-//        ToolsChooser.tools.writeTextIntoInputField2Tool ("google.login.inputField", "James15Belushi@gmail.com");
-//        ToolsChooser.tools.clickOnButtonTool ("google.login.button");
-//sleep (2000);
-//        ToolsChooser.tools.writeTextIntoInputField2Tool ("google.passWord.inputField", "parodia15");
-//        ToolsChooser.tools.clickOnButtonTool ("google.passWord.button");
-
-
-//        String appURL[];
-//        appURL = new String[Variables.todayFunnelsList.size ()];
-//        for (int i = 0; i < Variables.todayFunnelsList.size (); i++) {
-//            appURL[i] = Variables.todayFunnelsList.get (i);
-//        }
-
-
         int i = 0;
         int j = Variables.todayFunnelsList.size ();
         //  int m = j+1;
@@ -47,7 +28,7 @@ public class BfunnelTest {
 
         while (i != j) {
 
-            driver = new RemoteWebDriver (DesiredCapabilities.chrome ());
+            driver = new WebDriver (DesiredCapabilities.chrome ());
             //     розгорнуто
             //       driver.manage ().window ().maximize ();
             //     сховано
