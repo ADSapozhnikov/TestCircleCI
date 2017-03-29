@@ -14,13 +14,19 @@ general:
     only:
       - master
 
-#dependencies:
-#  override:
-#    - mvn dependency:resolve
-#  post:
-#    - wget https://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
-#    - java -jar selenium-server-standalone-2.53.1.jar:
-#        background: true
+dependencies:
+  override:
+    - mvn dependency:resolve
+  post:
+    - wget https://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+    - java -jar selenium-server-standalone-2.53.1.jar -role hub:
+        background: true
+    - java -jar selenium-server-standalone-2.53.1.jar -role webdriver -hub http://localhost:4444/grid/register -port 5555:
+        background: true
+    - java -jar selenium-server-standalone-2.53.1.jar -role webdriver -hub http://localhost:4444/grid/register -port 5556:
+        background: true
+    - java -jar selenium-server-standalone-2.53.1.jar -role webdriver -hub http://localhost:4444/grid/register -port 5557:
+        background: true
 
 ## Customize test commands
 test:
