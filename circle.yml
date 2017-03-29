@@ -14,13 +14,13 @@ general:
     only:
       - master
 
-dependencies:
-  override: 
-    - mvn dependency:resolve
-  post:
-    - wget https://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
-    - java -jar selenium-server-standalone-2.53.1.jar:
-        background: true
+#dependencies:
+#  override:
+#    - mvn dependency:resolve
+#  post:
+#    - wget https://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+#    - java -jar selenium-server-standalone-2.53.1.jar:
+#        background: true
 
 ## Customize test commands
 test:
